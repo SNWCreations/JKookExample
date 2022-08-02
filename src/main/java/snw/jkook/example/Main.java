@@ -1,16 +1,15 @@
 package snw.jkook.example;
 
 import org.slf4j.Logger;
-import snw.jkook.HttpAPI;
-import snw.jkook.bot.BaseBot;
-import snw.jkook.bot.BotDescription;
+import snw.jkook.plugin.BasePlugin;
+import snw.jkook.plugin.PluginDescription;
 
 import java.io.File;
 
-public class Main extends BaseBot {
+public class Main extends BasePlugin {
 
-    protected Main(String token, File configFile, File dataFolder, HttpAPI httpAPI, BotDescription description, File file, Logger logger) {
-        super(token, configFile, dataFolder, httpAPI, description, file, logger);
+    protected Main(File configFile, File dataFolder, PluginDescription description, File file, Logger logger) {
+        super(configFile, dataFolder, description, file, logger);
     }
 
     @Override
