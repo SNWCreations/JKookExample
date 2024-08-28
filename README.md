@@ -14,6 +14,6 @@ This is a Maven template for JKook plugins.
 
 This project defined a basic JKook plugin.
 
-Using JKook API 0.52.1 
+Using JKook API 0.53.0 
 
-For testing it, use [KookBC](https://github.com/SNWCreations/KookBC) version 0.30+
+For testing it, use [KookBC](https://github.com/SNWCreations/KookBC) version 0.31+
