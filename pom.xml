@@ -8,10 +8,41 @@
     <artifactId>example</artifactId>
     <version>1.0.0</version>
 
+    <developers>
+        <developer>
+            <name>SNWCreations</name>
+        </developer>
+    </developers>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                        </manifest>
+                        <manifestEntries>
+                            <!-- 自定义 MANIFEST.MC文件中其他属性 -->
+                            <Specification-Title>${artifactId}</Specification-Title>
+                            <Specification-Version>${version}</Specification-Version>
+                            <Specification-Vendor>SNWCreations</Specification-Vendor>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 
     <repositories>
         <repository>
@@ -24,7 +55,7 @@
         <dependency>
             <groupId>com.github.SNWCreations</groupId>
             <artifactId>JKook</artifactId>
-            <version>0.52.1</version>
+            <version>0.53.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
